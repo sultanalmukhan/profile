@@ -1,0 +1,156 @@
+.experience__head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px 24px;
+}
+
+.timeline {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+}
+
+.timeline__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 48px;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline__item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline__when {
+  flex: 0 1 200px;
+  min-width: 160px;
+}
+
+.timeline__dates {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-body);
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline__duration {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.timeline__body {
+  flex: 1 1 520px;
+  min-width: 0;
+}
+
+.timeline__company {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.timeline__role {
+  margin: 2px 0 0;
+  font-size: 16px;
+  color: var(--text-body);
+}
+
+.timeline__about {
+  margin: 10px 0 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.timeline__achievements {
+  margin: 18px 0 0;
+  padding: 0 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.timeline__meta {
+  margin: 18px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.timeline__meta.timeline__apps {
+  margin-top: 6px;
+}
+
+.timeline__app,
+.timeline__app:hover {
+  color: var(--text-body);
+}
+
+@media (max-width: 767px) {
+  .experience__head {
+    display: block;
+  }
+
+  .experience__head .btn {
+    margin-top: 16px;
+  }
+
+  .timeline {
+    margin-top: 24px;
+  }
+
+  .timeline__item {
+    display: block;
+    padding: 24px 0;
+  }
+
+  .timeline__dates {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .timeline__company {
+    margin-top: 6px;
+    font-size: 19px;
+  }
+
+  .timeline__role {
+    font-size: 15px;
+  }
+
+  .timeline__about {
+    margin-top: 8px;
+    font-size: 14.5px;
+  }
+
+  .timeline__achievements {
+    margin-top: 14px;
+    padding-left: 18px;
+    font-size: 15.5px;
+  }
+
+  .timeline__meta {
+    margin-top: 14px;
+    font-size: 13.5px;
+  }
+
+  .timeline__meta.timeline__apps {
+    margin-top: 4px;
+  }
+
+  .timeline__app {
+    display: inline-block;
+    padding: 6px 0;
+  }
+}

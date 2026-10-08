@@ -1,0 +1,258 @@
+:root {
+  /* Surfaces */
+  --bg: #131416;
+  --surface: #1b1c1f;
+  --raised: #232428;
+  --line: #2b2d32;
+  --control: #3a3d43;
+  --control-hover: #4e525a;
+  --frame-border: #34363b;
+
+  /* Text */
+  --heading: #f2f1ee;
+  --text-strong: #e3e4e6;
+  --text: #c9ccd1;
+  --text-body: #b0b4ba;
+  --text-muted: #8c9097;
+  --underline: #4a4e55;
+
+  /* Accent */
+  --accent: #2f5fb8;
+  --accent-hover: #3a6cc8;
+  --link: #8db0ea;
+  --link-hover: #b3cbf2;
+
+  --font-heading: 'Manrope', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+
+  --container: 1296px;
+  --gutter: clamp(20px, 4vw, 48px);
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: 80px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.icon {
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.75;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Layout */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+.section {
+  padding-top: clamp(64px, 8vw, 96px);
+}
+
+#projects.section {
+  padding-top: clamp(56px, 7vw, 88px);
+}
+
+.section-title {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 2.8vw, 36px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--heading);
+}
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 50;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: none;
+  color: #fff;
+}
+
+/* Text links: quiet underline that brightens on hover */
+
+.text-link {
+  text-decoration: underline;
+  text-decoration-color: var(--underline);
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-color 0.15s;
+}
+
+.text-link:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn--primary {
+  padding: 0 18px;
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  color: #fff;
+}
+
+.btn--secondary {
+  border-color: var(--control);
+  background: transparent;
+  color: var(--heading);
+}
+
+.btn--secondary:hover {
+  background: var(--raised);
+  border-color: var(--control-hover);
+  color: var(--heading);
+}
+
+.btn--small {
+  height: 40px;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.btn--header {
+  height: 38px;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+/* Breakpoint helpers */
+
+.only-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 72px;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .section {
+    padding-top: 56px;
+  }
+
+  #projects.section {
+    padding-top: 48px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+
+  .btn--block-mobile {
+    display: flex;
+    width: 100%;
+    height: 48px;
+  }
+
+  .only-desktop {
+    display: none;
+  }
+
+  .only-mobile {
+    display: revert;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,108 @@
+.contact__layout {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 72px;
+}
+
+.contact__intro {
+  flex: 1 1 360px;
+  min-width: 0;
+}
+
+.contact__text {
+  margin: 0;
+  max-width: 440px;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.contact__list {
+  flex: 1.3 1 460px;
+  min-width: 0;
+  margin: 0;
+}
+
+.contact__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+  min-height: 56px;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact__row:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.contact__row dt {
+  flex: 0 0 110px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.contact__row dd {
+  margin: 0;
+  flex: 1 1 220px;
+  min-width: 0;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.contact__link,
+.contact__link:hover {
+  color: var(--text-strong);
+}
+
+@media (max-width: 767px) {
+  .contact__layout {
+    display: block;
+    margin-top: 14px;
+  }
+
+  .contact__text {
+    max-width: none;
+    font-size: 16px;
+  }
+
+  .contact__actions {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .contact__list {
+    margin-top: 20px;
+  }
+
+  .contact__row {
+    display: block;
+    min-height: 0;
+    padding: 10px 0;
+  }
+
+  /* The CV row is desktop-only, so the WhatsApp row closes the list on mobile. */
+  .contact__row:nth-last-child(2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contact__row dt {
+    font-size: 13.5px;
+  }
+
+  .contact__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+  }
+}
