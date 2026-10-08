@@ -1,6 +1,6 @@
 # Sultan Almukhan · Portfolio
 
-A single-page portfolio built with React, TypeScript and Vite. It builds to static files that can be hosted on GitHub Pages.
+A single-page portfolio built with React, TypeScript and Vite, published at https://sultanalmukhan.github.io/profile/.
 
 ## Run it locally
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173.
+Open http://localhost:5173/profile/.
 
 To check the production build:
 
@@ -18,7 +18,7 @@ npm run build
 npm run preview
 ```
 
-Open http://localhost:4173.
+Open http://localhost:4173/profile/.
 
 ## Updating content
 
@@ -45,6 +45,6 @@ The gallery appears as soon as a project has one screenshot. The counter and pre
 
 ## Deploying to GitHub Pages
 
-The build uses relative paths (`base: './'` in `vite.config.ts`), so the same output works at `username.github.io` and at `username.github.io/repository-name/`.
+`.github/workflows/deploy.yml` builds the site and publishes it to GitHub Pages on every push to `main`. It can also be started by hand from the **Actions** tab (**Deploy to GitHub Pages › Run workflow**). GitHub Pages must be enabled with **Settings › Pages › Source** set to **GitHub Actions**.
 
-`.github/workflows/deploy.yml` builds and publishes the site on every push to `main`. To use it, push this folder to a GitHub repository and set **Settings › Pages › Source** to **GitHub Actions**.
+The site lives under `/profile/`, so `base` in `vite.config.ts` is `'/profile/'`, and the page URL in `index.html` (canonical link and Open Graph tags) is `https://sultanalmukhan.github.io/profile/`. If the site moves to a custom domain, change `base` to `'/'` and update those URLs.
