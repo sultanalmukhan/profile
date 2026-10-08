@@ -1,6 +1,6 @@
 # Sultan Almukhan · Portfolio
 
-A single-page portfolio built with React, TypeScript and Vite, published at https://sultanalmukhan.github.io/profile/.
+A single-page portfolio built with React, TypeScript and Vite, published at https://sultanalmukhan.com/.
 
 ## Run it locally
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:5173/profile/.
+Open http://localhost:5173.
 
 To check the production build:
 
@@ -18,7 +18,7 @@ npm run build
 npm run preview
 ```
 
-Open http://localhost:4173/profile/.
+Open http://localhost:4173.
 
 ## Updating content
 
@@ -47,4 +47,4 @@ The gallery appears as soon as a project has one screenshot. The counter and pre
 
 `.github/workflows/deploy.yml` builds the site and publishes it to GitHub Pages on every push to `main`. It can also be started by hand from the **Actions** tab (**Deploy to GitHub Pages › Run workflow**). GitHub Pages must be enabled with **Settings › Pages › Source** set to **GitHub Actions**.
 
-The site lives under `/profile/`, so `base` in `vite.config.ts` is `'/profile/'`, and the page URL in `index.html` (canonical link and Open Graph tags) is `https://sultanalmukhan.github.io/profile/`. If the site moves to a custom domain, change `base` to `'/'` and update those URLs.
+The site is served from the custom domain https://sultanalmukhan.com/, set under **Settings › Pages › Custom domain** with DNS at Porkbun. Because it lives at the domain root, `base` in `vite.config.ts` is `'/'`, and the canonical link and Open Graph tags in `index.html` use `https://sultanalmukhan.com/`. With an Actions-based deployment the domain comes from the Pages settings, so no `CNAME` file is needed in the build.
