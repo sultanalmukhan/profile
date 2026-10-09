@@ -88,6 +88,11 @@ img {
   stroke-linejoin: round;
 }
 
+.icon--filled {
+  fill: currentColor;
+  stroke: none;
+}
+
 /* Layout */
 
 .container {

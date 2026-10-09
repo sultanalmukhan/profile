@@ -1,7 +1,8 @@
 import { useRef } from 'react';
+import { portfolio } from '../content/portfolio';
 import type { Project } from '../content/types';
 import { asset } from '../lib/asset';
-import { ExternalIcon, LockIcon } from './Icons';
+import { ExternalIcon, LockIcon, StarIcon } from './Icons';
 import { InfoDialog } from './InfoDialog';
 import type { InfoDialogHandle } from './InfoDialog';
 import { ScreenshotGallery } from './ScreenshotGallery';
@@ -24,6 +25,17 @@ export function ProjectCard({ project }: { project: Project }) {
           <p className="card__subtitle">{project.subtitle}</p>
         </div>
       </div>
+
+      {project.solo && (
+        <p className="card__solo">
+          <span className="solo-badge">
+            <StarIcon />
+            {portfolio.soloBadge.label}
+          </span>
+          <span className="card__solo-note">{portfolio.soloBadge.note}</span>
+        </p>
+      )}
+
       <p className="card__description">{project.description}</p>
 
       {project.screenshots.length > 0 && (
@@ -32,7 +44,11 @@ export function ProjectCard({ project }: { project: Project }) {
         </div>
       )}
 
-      {project.stack && <p className="card__stack">{project.stack}</p>}
+      {project.stack && (
+        <p className="card__stack">
+          {project.stack.label}: {project.stack.items.join(', ')}
+        </p>
+      )}
 
       <div className="card__action">
         {store.kind === 'link' ? (

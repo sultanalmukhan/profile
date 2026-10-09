@@ -87,6 +87,39 @@
   color: var(--text-muted);
 }
 
+/* Ownership badge for confirmed solo builds: the most prominent label on a card. */
+.card__solo {
+  margin: 16px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.solo-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 28px;
+  padding: 4px 12px 4px 10px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.card__solo-note {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text);
+}
+
 .card__description {
   margin: 14px 0 0;
   max-width: 720px;
@@ -174,6 +207,19 @@
   .card__subtitle {
     margin-top: 2px;
     font-size: 14.5px;
+  }
+
+  .card__solo {
+    margin-top: 14px;
+    gap: 6px 10px;
+  }
+
+  .solo-badge {
+    font-size: 13px;
+  }
+
+  .card__solo-note {
+    font-size: 13.5px;
   }
 
   .card__description {

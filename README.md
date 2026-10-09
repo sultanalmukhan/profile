@@ -24,9 +24,11 @@ Open http://localhost:4173.
 
 All text, links and media are in [`src/content/portfolio.ts`](src/content/portfolio.ts). The components only read from it, so you don't need to touch them to update the site.
 
-- **Projects:** each entry under `projects` has a name, a subtitle (company or App Store category), a description, an optional stack line, a logo, screenshots and an App Store action. The order in the file is the order on the page.
+- **Projects:** each entry under `projects` has a name, a subtitle (company or App Store category), a description, a logo, screenshots and an App Store action. The order in the file is the order on the page.
+- **Stack line:** `stack: { label, items }` lists only technologies a source attributes to that app. Leave it out when none do.
+- **Solo badge:** `solo: true` shows the "Solo iOS Developer" badge. Its text is in `soloBadge`.
 - **App Store button:** `{ kind: 'link', href, ariaLabel }` opens a listing. `{ kind: 'notice', title, message }` opens an informational dialog instead (used for Fergus).
-- **Experience:** every achievement in `achievements` is shown. `apps` links to project cards by their `id`.
+- **Experience:** dates are `start` and `end` months as `'YYYY-MM'` (leave out `end` for the current role). The page shows them as "Aug 2023 – Sep 2025" and calculates the duration. Every achievement in `achievements` is shown. `apps` links to project cards by their `id`.
 - **CV and photo:** replace `public/Sultan_Almukhan_iOS_Developer.pdf` or `public/sultan-almukhan.jpg`, or point `cv.file` and `profile.photo` at new files in `public/`.
 
 ### Logos and screenshots

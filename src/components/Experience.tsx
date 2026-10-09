@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import { portfolio } from '../content/portfolio';
+import { formatDuration, formatRange } from '../lib/dates';
 import { CvLink } from './CvLink';
 import './Experience.css';
 
@@ -14,14 +15,16 @@ export function Experience() {
       </div>
 
       <ol className="timeline">
-        {portfolio.experience.map((job) => (
-          <li key={`${job.company}-${job.dates}`} className="timeline__item">
+        {portfolio.experience.map((job) => {
+          const duration = formatDuration(job.start, job.end);
+          return (
+          <li key={`${job.company}-${job.start}`} className="timeline__item">
             <div className="timeline__when">
               <p className="timeline__dates">
-                {job.dates}
-                {job.duration && <span className="only-mobile"> · {job.duration}</span>}
+                {formatRange(job.start, job.end)}
+                <span className="only-mobile"> · {duration}</span>
               </p>
-              {job.duration && <p className="timeline__duration only-desktop">{job.duration}</p>}
+              <p className="timeline__duration only-desktop">{duration}</p>
             </div>
 
             <div className="timeline__body">
@@ -49,7 +52,8 @@ export function Experience() {
               )}
             </div>
           </li>
-        ))}
+          );
+        })}
       </ol>
     </section>
   );

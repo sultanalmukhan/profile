@@ -40,8 +40,13 @@ export interface Project {
   /** Company for professional projects, App Store category for personal ones. */
   subtitle: string;
   description: string;
-  /** Employer stack line. Leave out when no source lists the technologies. */
-  stack?: string;
+  /**
+   * Technologies used on this app, shown as "<label>: a, b, c". Only list what a
+   * source attributes to this app; leave out when no source lists them.
+   */
+  stack?: { label: string; items: string[] };
+  /** Shows the "Solo iOS Developer" badge (text in `soloBadge`). Only for confirmed solo builds. */
+  solo?: boolean;
   /** Any number of screenshots. With none, the card shows no gallery. */
   screenshots: Screenshot[];
   store: StoreAction;
@@ -55,9 +60,10 @@ export interface ProjectGroup {
 }
 
 export interface ExperienceEntry {
-  /** En dash between dates, e.g. "Aug 2024 – Sep 2025". */
-  dates: string;
-  duration?: string;
+  /** First month as "YYYY-MM". Shown as "Aug 2023"; the duration is calculated from the dates. */
+  start: string;
+  /** Last month as "YYYY-MM". Leave out for a current role ("Present"). */
+  end?: string;
   company: string;
   role: string;
   companyDescription: string;
@@ -91,6 +97,8 @@ export interface Portfolio {
     appStoreDeveloper: LabeledLink;
   };
   navigation: { id: string; label: string }[];
+  /** Text of the badge on projects marked `solo`. */
+  soloBadge: { label: string; note: string };
   projects: ProjectGroup[];
   experience: ExperienceEntry[];
   about: {

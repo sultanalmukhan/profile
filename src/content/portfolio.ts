@@ -47,6 +47,11 @@ export const portfolio: Portfolio = {
     { id: 'contact', label: 'Contact' },
   ],
 
+  soloBadge: {
+    label: 'Solo iOS Developer',
+    note: 'Built and shipped end-to-end.',
+  },
+
   projects: [
     {
       title: 'Professional Projects',
@@ -58,7 +63,8 @@ export const portfolio: Portfolio = {
           subtitle: 'FGS Global',
           description:
             'A voice-first enterprise AI app used by FGS Global employees across 13 countries. Hands-free voice chat combines on-device speech recognition, AI responses streamed over SSE and server-generated TTS playback.',
-          stack: 'FGS Global stack: Swift, UIKit, Speech Framework, SSE',
+          stack: { label: 'FGS Global stack', items: ['Swift', 'UIKit', 'Swift Testing', 'MVP-C', 'AVFoundation', 'Speech Framework', 'SSE', 'Okta OIDC', 'Next.js'] },
+          solo: true,
           logo: logoFor('fergus'),
           screenshots: screenshotsFor('fergus'),
           store: {
@@ -73,8 +79,8 @@ export const portfolio: Portfolio = {
           name: 'Mitt Tele2',
           subtitle: 'Tele2',
           description:
-            'Lets Tele2 customers in Sweden track their mobile data usage, view invoices and manage their subscriptions and hardware.',
-          stack: 'Tele2 stack: Swift, UIKit, SwiftUI, Swift Testing',
+            "A telecom superapp bringing mobile plans, account management, media features, and loan services into one experience.",
+          stack: { label: 'Tele2 stack', items: ['Swift', 'UIKit', 'SwiftUI', 'Swift Testing'] },
           logo: logoFor('mitt-tele2'),
           screenshots: screenshotsFor('mitt-tele2'),
           store: {
@@ -88,8 +94,8 @@ export const portfolio: Portfolio = {
           name: 'Comviq',
           subtitle: 'Tele2',
           description:
-            'Gives Comviq customers in Sweden control of their mobile subscriptions, prepaid cards and mobile broadband: remaining data, invoices and payments, top-ups and extra data.',
-          stack: 'Tele2 stack: Swift, UIKit, SwiftUI, Swift Testing',
+            "A telecom superapp combining mobile account management, top-ups, media features, and loan services in one place.",
+          stack: { label: 'Tele2 stack', items: ['Swift', 'UIKit', 'SwiftUI', 'Swift Testing'] },
           logo: logoFor('comviq'),
           screenshots: screenshotsFor('comviq'),
           store: {
@@ -104,7 +110,7 @@ export const portfolio: Portfolio = {
           subtitle: 'DAR',
           description:
             'A business management platform for teams of all sizes, bringing tasks, approvals, timesheets, employee profiles, online meetings and file storage into one app.',
-          stack: 'DAR stack: Swift, UIKit, SPM, Tuist',
+          stack: { label: 'DAR stack', items: ['Swift', 'UIKit', 'XCTest', 'SPM', 'MVVM-C', 'Fastlane', 'Tuist', 'Swinject'] },
           logo: logoFor('darlean'),
           screenshots: screenshotsFor('darlean'),
           store: {
@@ -119,7 +125,7 @@ export const portfolio: Portfolio = {
           subtitle: 'Halyk Bank',
           description:
             "Halyk Bank's super app for transfers, payments, loans and deposits, plus shopping with installments, travel and event tickets, and public services.",
-          stack: 'Halyk Bank stack: Swift, UIKit, SnapKit, MVVM-C',
+          stack: { label: 'Halyk Bank stack', items: ['Swift', 'UIKit', 'XCTest', 'SnapKit', 'MVVM-C', 'GCD', 'Liveness'] },
           logo: logoFor('halyk'),
           screenshots: screenshotsFor('halyk'),
           store: {
@@ -134,7 +140,8 @@ export const portfolio: Portfolio = {
           subtitle: 'Tredo',
           description:
             'A cryptocurrency exchange app for buying, selling and trading assets such as Bitcoin and Ethereum, with deposits and withdrawals through partner banks in Kazakhstan.',
-          stack: 'Tredo stack: Swift, Objective-C, UIKit',
+          stack: { label: 'Tredo stack', items: ['Swift', 'Objective-C', 'UIKit', 'WebSocket'] },
+          solo: true,
           logo: logoFor('intebix'),
           screenshots: screenshotsFor('intebix'),
           store: {
@@ -149,7 +156,7 @@ export const portfolio: Portfolio = {
           subtitle: 'Tredo',
           // Placeholder from the design until a one-line product description is supplied.
           description: 'An iOS application delivered while working at Tredo.',
-          stack: 'Tredo stack: Swift, Objective-C, UIKit',
+          stack: { label: 'Tredo stack', items: ['Swift', 'Objective-C', 'UIKit'] },
           logo: logoFor('biteeu'),
           screenshots: screenshotsFor('biteeu'),
           store: {
@@ -164,7 +171,7 @@ export const portfolio: Portfolio = {
           subtitle: 'Tredo',
           description:
             "Bank CenterCredit's mobile banking app for entrepreneurs and business clients: open accounts, send domestic and international payments, exchange currency and manage business cards.",
-          stack: 'Tredo stack: Swift, Objective-C, UIKit',
+          stack: { label: 'Tredo stack', items: ['Swift', 'Objective-C', 'UIKit'] },
           logo: logoFor('bcc-business'),
           screenshots: screenshotsFor('bcc-business'),
           store: {
@@ -191,6 +198,7 @@ export const portfolio: Portfolio = {
           description:
             'A step counter that turns walking into a role-playing game. Daily steps earn XP that levels up raccoon heroes, with streaks, step challenges and achievements to keep people moving.',
           logo: logoFor('stepshero'),
+          solo: true,
           screenshots: screenshotsFor('stepshero'),
           store: {
             kind: 'link',
@@ -206,6 +214,7 @@ export const portfolio: Portfolio = {
           description:
             'Adds AI-generated captions to videos for TikTok, Instagram and YouTube, with speech transcription, translation into 99 languages and customizable caption styles.',
           logo: logoFor('capslab'),
+          solo: true,
           screenshots: screenshotsFor('capslab'),
           store: {
             kind: 'link',
@@ -219,7 +228,7 @@ export const portfolio: Portfolio = {
 
   experience: [
     {
-      dates: 'Sep 2025 – Present',
+      start: '2025-09',
       company: 'FGS Global',
       role: 'Senior iOS Developer',
       companyDescription:
@@ -234,8 +243,8 @@ export const portfolio: Portfolio = {
       apps: [{ name: 'Fergus', projectId: 'app-fergus' }],
     },
     {
-      dates: 'Aug 2024 – Sep 2025',
-      duration: '1 yr 2 mos',
+      start: '2023-08',
+      end: '2025-09',
       company: 'Tele2',
       role: 'Senior iOS Developer',
       companyDescription:
@@ -246,15 +255,15 @@ export const portfolio: Portfolio = {
         'Integrated and launched an end-to-end loan application flow with partner banks (forms, document upload, calculations, pre-scoring), which boosted the number of issued loans by 34.6% within two months of release.',
         "Led modernization of the project's largest module by migrating to Swift 6, replacing XCTest with Swift Testing and refactoring async logic to async/await, raising the crash-free rate from 90.2% to 95.7% while improving performance and maintainability.",
       ],
-      technologies: ['Swift', 'UIKit', 'SwiftUI', 'Swift Testing', 'SPM', 'MVP-C', 'async/await', 'Fastlane', 'Swinject'],
+      technologies: ['Swift', 'UIKit', 'SwiftUI', 'Swift Testing', 'SPM', 'MVP', 'async/await', 'Fastlane', 'Swinject'],
       apps: [
         { name: 'Mitt Tele2', projectId: 'app-mitt-tele2' },
         { name: 'Comviq', projectId: 'app-comviq' },
       ],
     },
     {
-      dates: 'May 2023 – Aug 2024',
-      duration: '1 yr 4 mos',
+      start: '2021-08',
+      end: '2023-08',
       company: 'DAR',
       role: 'Senior iOS Developer',
       companyDescription:
@@ -267,8 +276,8 @@ export const portfolio: Portfolio = {
       apps: [{ name: 'Darlean', projectId: 'app-darlean' }],
     },
     {
-      dates: 'Jan 2022 – May 2023',
-      duration: '1 yr 5 mos',
+      start: '2020-11',
+      end: '2021-08',
       company: 'Halyk Bank',
       role: 'iOS Developer',
       companyDescription:
@@ -281,8 +290,8 @@ export const portfolio: Portfolio = {
       apps: [{ name: 'Halyk', projectId: 'app-halyk' }],
     },
     {
-      dates: 'Feb 2019 – Jan 2022',
-      duration: '3 yrs',
+      start: '2018-12',
+      end: '2020-11',
       company: 'Tredo',
       role: 'iOS Developer',
       companyDescription:
