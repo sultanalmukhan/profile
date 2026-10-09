@@ -24,24 +24,26 @@ Open http://localhost:4173.
 
 All text, links and media are in [`src/content/portfolio.ts`](src/content/portfolio.ts). The components only read from it, so you don't need to touch them to update the site.
 
-- **Projects:** each entry under `projects` has a name, a subtitle (company or App Store category), a description, an optional stack line, screenshots and an App Store action. The order in the file is the order on the page.
+- **Projects:** each entry under `projects` has a name, a subtitle (company or App Store category), a description, an optional stack line, a logo, screenshots and an App Store action. The order in the file is the order on the page.
 - **App Store button:** `{ kind: 'link', href, ariaLabel }` opens a listing. `{ kind: 'notice', title, message }` opens an informational dialog instead (used for Fergus).
 - **Experience:** every achievement in `achievements` is shown. `apps` links to project cards by their `id`.
 - **CV and photo:** replace `public/Sultan_Almukhan_iOS_Developer.pdf` or `public/sultan-almukhan.jpg`, or point `cv.file` and `profile.photo` at new files in `public/`.
 
-### Adding screenshots
+### Logos and screenshots
 
-1. Put the images in `public/screenshots/<app>/`, for example `public/screenshots/mitt-tele2/01.webp`. Use portrait iPhone screenshots (1290 × 2796 is the frame shape). WebP or AVIF keeps them small.
-2. List them in that project's `screenshots` array:
+The originals live in `Logos/` and `Screenshots/<App>/` and are never changed or deployed. Folders with `_raw` in their name are source material and are skipped. The site uses web copies made by:
 
-   ```ts
-   screenshots: [
-     { src: 'screenshots/mitt-tele2/01.webp', alt: 'Mitt Tele2 home screen with remaining data' },
-     { src: 'screenshots/mitt-tele2/02.webp', alt: 'Mitt Tele2 invoice list' },
-   ],
-   ```
+```bash
+npm run images
+```
 
-The gallery appears as soon as a project has one screenshot. The counter and previous/next buttons appear once there are more screenshots than fit in one view. A project with no screenshots shows no gallery.
+This runs `scripts/optimize-images.mjs` (macOS only, it uses the built-in `sips` tool). It writes:
+
+- screenshots to `public/screenshots/<app>/` as AVIF with a JPEG fallback: a small copy for the card gallery and a large one (up to 1600 px tall) for the lightbox;
+- logos to `public/logos/<app>.png` at 144 × 144;
+- their sizes to `src/content/media.generated.json`, which `portfolio.ts` reads through `screenshotsFor('<app>')` and `logoFor('<app>')`.
+
+Screenshots are shown in file-name order (`1.png`, `2.png`, … `10.png`). To add an app or a folder, map it in `SCREENSHOT_FOLDERS` or `LOGO_FILES` at the top of the script, run `npm run images`, and use the same slug in `portfolio.ts`. A project with no screenshots shows no gallery; one without a logo shows its title alone.
 
 ## Deploying to GitHub Pages
 

@@ -1,0 +1,127 @@
+.lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  border: 0;
+  background: rgba(6, 7, 8, 0.94);
+  color: var(--text);
+  overscroll-behavior: contain;
+}
+
+.lightbox[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox::backdrop {
+  background: rgba(6, 7, 8, 0.6);
+}
+
+.lightbox__bar,
+.lightbox__nav {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px clamp(12px, 3vw, 24px);
+}
+
+.lightbox__bar {
+  justify-content: space-between;
+}
+
+.lightbox__nav {
+  justify-content: center;
+}
+
+.lightbox__title {
+  margin: 0;
+  min-width: 0;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--heading);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lightbox__stage {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 clamp(12px, 3vw, 24px);
+  touch-action: pan-y;
+  container-type: size;
+}
+
+.lightbox__stage picture {
+  display: contents;
+}
+
+/* Height is set inline: the stage height, the image's natural height or the height that fits the stage width, whichever is smallest. */
+.lightbox__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.lightbox__preload {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lightbox__preload img {
+  width: 1px;
+  height: 1px;
+}
+
+.lightbox__count {
+  min-width: 64px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-body);
+  font-variant-numeric: tabular-nums;
+}
+
+.lightbox__button {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--control);
+  background: rgba(19, 20, 22, 0.6);
+  color: var(--heading);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.lightbox__button:not([aria-disabled='true']):hover {
+  background: var(--raised);
+  border-color: var(--control-hover);
+}
+
+.lightbox__button[aria-disabled='true'] {
+  opacity: 0.35;
+  cursor: default;
+}

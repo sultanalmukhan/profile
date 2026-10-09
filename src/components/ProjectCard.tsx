@@ -1,29 +1,34 @@
 import { useRef } from 'react';
 import type { Project } from '../content/types';
+import { asset } from '../lib/asset';
 import { ExternalIcon, LockIcon } from './Icons';
 import { InfoDialog } from './InfoDialog';
 import type { InfoDialogHandle } from './InfoDialog';
-import { ScreenshotCarousel } from './ScreenshotCarousel';
+import { ScreenshotGallery } from './ScreenshotGallery';
 
 export function ProjectCard({ project }: { project: Project }) {
   const noticeRef = useRef<InfoDialogHandle>(null);
   const titleId = `${project.id}-title`;
-  const hasShots = project.screenshots.length > 0;
   const { store } = project;
 
   return (
-    <article id={project.id} className={`card${hasShots ? ' card--with-shots' : ''}`} aria-labelledby={titleId}>
-      <div className="card__info">
-        <h4 id={titleId} className="card__title">
-          {project.name}
-        </h4>
-        <p className="card__subtitle">{project.subtitle}</p>
-        <p className="card__description">{project.description}</p>
+    <article id={project.id} className="card" aria-labelledby={titleId}>
+      <div className="card__header">
+        {project.logo && (
+          <img className="card__logo" src={asset(project.logo)} alt="" width={48} height={48} loading="lazy" decoding="async" />
+        )}
+        <div className="card__heading">
+          <h4 id={titleId} className="card__title">
+            {project.name}
+          </h4>
+          <p className="card__subtitle">{project.subtitle}</p>
+        </div>
       </div>
+      <p className="card__description">{project.description}</p>
 
-      {hasShots && (
+      {project.screenshots.length > 0 && (
         <div className="card__shots">
-          <ScreenshotCarousel appName={project.shortName ?? project.name} screenshots={project.screenshots} />
+          <ScreenshotGallery appName={project.shortName ?? project.name} screenshots={project.screenshots} />
         </div>
       )}
 

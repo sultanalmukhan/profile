@@ -1,14 +1,16 @@
+import { logoFor, screenshotsFor } from './media';
 import type { Portfolio } from './types';
 
 /*
  * All portfolio text, links and media live in this file.
  *
- * Files referenced here (photo, CV, screenshots) go in the `public/` folder
- * and are written without a leading slash, e.g. "screenshots/halyk/01.webp".
+ * Files referenced here (photo, CV) go in the `public/` folder and are written
+ * without a leading slash, e.g. "sultan-almukhan.jpg".
  *
- * Screenshots: add `{ src, alt }` entries to a project's `screenshots` array.
- * The gallery appears as soon as an app has at least one screenshot, and the
- * previous/next controls appear once they no longer fit in one view.
+ * Logos and screenshots come from `npm run images`, which turns the originals
+ * in Logos/ and Screenshots/<App>/ into web copies and looks them up by slug
+ * (see scripts/optimize-images.mjs). A project with no screenshots shows no
+ * gallery; one with no logo shows its title alone.
  */
 export const portfolio: Portfolio = {
   profile: {
@@ -57,7 +59,8 @@ export const portfolio: Portfolio = {
           description:
             'A voice-first enterprise AI app used by FGS Global employees across 13 countries. Hands-free voice chat combines on-device speech recognition, AI responses streamed over SSE and server-generated TTS playback.',
           stack: 'FGS Global stack: Swift, UIKit, Speech Framework, SSE',
-          screenshots: [],
+          logo: logoFor('fergus'),
+          screenshots: screenshotsFor('fergus'),
           store: {
             kind: 'notice',
             title: 'Internal enterprise app',
@@ -72,7 +75,8 @@ export const portfolio: Portfolio = {
           description:
             'Lets Tele2 customers in Sweden track their mobile data usage, view invoices and manage their subscriptions and hardware.',
           stack: 'Tele2 stack: Swift, UIKit, SwiftUI, Swift Testing',
-          screenshots: [],
+          logo: logoFor('mitt-tele2'),
+          screenshots: screenshotsFor('mitt-tele2'),
           store: {
             kind: 'link',
             href: 'https://apps.apple.com/de/app/mitt-tele2/id479841366',
@@ -86,7 +90,8 @@ export const portfolio: Portfolio = {
           description:
             'Gives Comviq customers in Sweden control of their mobile subscriptions, prepaid cards and mobile broadband: remaining data, invoices and payments, top-ups and extra data.',
           stack: 'Tele2 stack: Swift, UIKit, SwiftUI, Swift Testing',
-          screenshots: [],
+          logo: logoFor('comviq'),
+          screenshots: screenshotsFor('comviq'),
           store: {
             kind: 'link',
             href: 'https://apps.apple.com/de/app/comviq/id469353162',
@@ -100,7 +105,8 @@ export const portfolio: Portfolio = {
           description:
             'A business management platform for teams of all sizes, bringing tasks, approvals, timesheets, employee profiles, online meetings and file storage into one app.',
           stack: 'DAR stack: Swift, UIKit, SPM, Tuist',
-          screenshots: [],
+          logo: logoFor('darlean'),
+          screenshots: screenshotsFor('darlean'),
           store: {
             kind: 'link',
             href: 'https://apps.apple.com/de/app/darlean-eu/id1508293776',
@@ -114,7 +120,8 @@ export const portfolio: Portfolio = {
           description:
             "Halyk Bank's super app for transfers, payments, loans and deposits, plus shopping with installments, travel and event tickets, and public services.",
           stack: 'Halyk Bank stack: Swift, UIKit, SnapKit, MVVM-C',
-          screenshots: [],
+          logo: logoFor('halyk'),
+          screenshots: screenshotsFor('halyk'),
           store: {
             kind: 'link',
             href: 'https://apps.apple.com/us/app/halyk-kazakhstan/id440635615',
@@ -128,7 +135,8 @@ export const portfolio: Portfolio = {
           description:
             'A cryptocurrency exchange app for buying, selling and trading assets such as Bitcoin and Ethereum, with deposits and withdrawals through partner banks in Kazakhstan.',
           stack: 'Tredo stack: Swift, Objective-C, UIKit',
-          screenshots: [],
+          logo: logoFor('intebix'),
+          screenshots: screenshotsFor('intebix'),
           store: {
             kind: 'link',
             href: 'https://apps.apple.com/kz/app/intebix/id6443622769',
@@ -142,7 +150,8 @@ export const portfolio: Portfolio = {
           // Placeholder from the design until a one-line product description is supplied.
           description: 'An iOS application delivered while working at Tredo.',
           stack: 'Tredo stack: Swift, Objective-C, UIKit',
-          screenshots: [],
+          logo: logoFor('biteeu'),
+          screenshots: screenshotsFor('biteeu'),
           store: {
             kind: 'link',
             href: 'https://biteeu.appstor.io/',
@@ -156,7 +165,8 @@ export const portfolio: Portfolio = {
           description:
             "Bank CenterCredit's mobile banking app for entrepreneurs and business clients: open accounts, send domestic and international payments, exchange currency and manage business cards.",
           stack: 'Tredo stack: Swift, Objective-C, UIKit',
-          screenshots: [],
+          logo: logoFor('bcc-business'),
+          screenshots: screenshotsFor('bcc-business'),
           store: {
             kind: 'link',
             href: 'https://apps.apple.com/in/app/bcc-business-2-0/id6733227151',
@@ -180,7 +190,8 @@ export const portfolio: Portfolio = {
           subtitle: 'Health & Fitness',
           description:
             'A step counter that turns walking into a role-playing game. Daily steps earn XP that levels up raccoon heroes, with streaks, step challenges and achievements to keep people moving.',
-          screenshots: [],
+          logo: logoFor('stepshero'),
+          screenshots: screenshotsFor('stepshero'),
           store: {
             kind: 'link',
             href: 'https://apps.apple.com/us/app/stepshero-walking-game/id6752722061',
@@ -194,7 +205,8 @@ export const portfolio: Portfolio = {
           subtitle: 'Photo & Video',
           description:
             'Adds AI-generated captions to videos for TikTok, Instagram and YouTube, with speech transcription, translation into 99 languages and customizable caption styles.',
-          screenshots: [],
+          logo: logoFor('capslab'),
+          screenshots: screenshotsFor('capslab'),
           store: {
             kind: 'link',
             href: 'https://apps.apple.com/us/app/auto-captions-capslab-ai/id6751768318',

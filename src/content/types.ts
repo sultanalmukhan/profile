@@ -4,11 +4,21 @@ export interface LabeledLink {
   label: string;
 }
 
+/**
+ * One screenshot as prepared by `npm run images`. Paths point into `public/`
+ * without an extension: an `.avif` and a `.jpg` exist for each.
+ */
 export interface Screenshot {
-  /** File path inside `public/`, e.g. "screenshots/mitt-tele2/01.webp". */
-  src: string;
-  /** What the screenshot shows, read by screen readers. */
-  alt: string;
+  /** Small copy shown in the card gallery. */
+  thumb: string;
+  thumbWidth: number;
+  thumbHeight: number;
+  /** Large copy shown in the lightbox. */
+  full: string;
+  width: number;
+  height: number;
+  /** What the screenshot shows, read by screen readers. Defaults to "<App> screenshot N of M". */
+  alt?: string;
 }
 
 /**
@@ -23,8 +33,10 @@ export interface Project {
   /** Anchor id, also used by the Experience section's app links. */
   id: string;
   name: string;
-  /** Shorter name for carousel labels, e.g. "Next StepsHero screenshots". Defaults to `name`. */
+  /** Shorter name for gallery labels, e.g. "Next StepsHero screenshots". Defaults to `name`. */
   shortName?: string;
+  /** App icon shown left of the title, as a path inside `public/`. */
+  logo?: string;
   /** Company for professional projects, App Store category for personal ones. */
   subtitle: string;
   description: string;

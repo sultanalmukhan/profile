@@ -1,0 +1,524 @@
+{
+  "screenshots": {
+    "bcc-business": [
+      {
+        "thumb": "screenshots/bcc-business/01-thumb",
+        "full": "screenshots/bcc-business/01-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/bcc-business/02-thumb",
+        "full": "screenshots/bcc-business/02-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/bcc-business/03-thumb",
+        "full": "screenshots/bcc-business/03-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/bcc-business/04-thumb",
+        "full": "screenshots/bcc-business/04-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/bcc-business/05-thumb",
+        "full": "screenshots/bcc-business/05-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/bcc-business/06-thumb",
+        "full": "screenshots/bcc-business/06-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/bcc-business/07-thumb",
+        "full": "screenshots/bcc-business/07-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      }
+    ],
+    "biteeu": [
+      {
+        "thumb": "screenshots/biteeu/01-thumb",
+        "full": "screenshots/biteeu/01-full",
+        "width": 885,
+        "height": 1600,
+        "thumbWidth": 265,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/biteeu/02-thumb",
+        "full": "screenshots/biteeu/02-full",
+        "width": 885,
+        "height": 1600,
+        "thumbWidth": 265,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/biteeu/03-thumb",
+        "full": "screenshots/biteeu/03-full",
+        "width": 885,
+        "height": 1600,
+        "thumbWidth": 265,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/biteeu/04-thumb",
+        "full": "screenshots/biteeu/04-full",
+        "width": 885,
+        "height": 1600,
+        "thumbWidth": 265,
+        "thumbHeight": 480
+      }
+    ],
+    "capslab": [
+      {
+        "thumb": "screenshots/capslab/01-thumb",
+        "full": "screenshots/capslab/01-full",
+        "width": 737,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/capslab/02-thumb",
+        "full": "screenshots/capslab/02-full",
+        "width": 737,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/capslab/03-thumb",
+        "full": "screenshots/capslab/03-full",
+        "width": 737,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/capslab/04-thumb",
+        "full": "screenshots/capslab/04-full",
+        "width": 737,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      }
+    ],
+    "comviq": [
+      {
+        "thumb": "screenshots/comviq/01-thumb",
+        "full": "screenshots/comviq/01-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/comviq/02-thumb",
+        "full": "screenshots/comviq/02-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/comviq/03-thumb",
+        "full": "screenshots/comviq/03-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/comviq/04-thumb",
+        "full": "screenshots/comviq/04-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/comviq/05-thumb",
+        "full": "screenshots/comviq/05-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/comviq/06-thumb",
+        "full": "screenshots/comviq/06-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/comviq/07-thumb",
+        "full": "screenshots/comviq/07-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/comviq/08-thumb",
+        "full": "screenshots/comviq/08-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      }
+    ],
+    "darlean": [
+      {
+        "thumb": "screenshots/darlean/01-thumb",
+        "full": "screenshots/darlean/01-full",
+        "width": 459,
+        "height": 998,
+        "thumbWidth": 220,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/darlean/02-thumb",
+        "full": "screenshots/darlean/02-full",
+        "width": 459,
+        "height": 998,
+        "thumbWidth": 220,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/darlean/03-thumb",
+        "full": "screenshots/darlean/03-full",
+        "width": 459,
+        "height": 998,
+        "thumbWidth": 220,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/darlean/04-thumb",
+        "full": "screenshots/darlean/04-full",
+        "width": 459,
+        "height": 998,
+        "thumbWidth": 220,
+        "thumbHeight": 480
+      }
+    ],
+    "fergus": [
+      {
+        "thumb": "screenshots/fergus/01-thumb",
+        "full": "screenshots/fergus/01-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/fergus/02-thumb",
+        "full": "screenshots/fergus/02-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/fergus/03-thumb",
+        "full": "screenshots/fergus/03-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/fergus/04-thumb",
+        "full": "screenshots/fergus/04-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/fergus/05-thumb",
+        "full": "screenshots/fergus/05-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/fergus/06-thumb",
+        "full": "screenshots/fergus/06-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/fergus/07-thumb",
+        "full": "screenshots/fergus/07-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      }
+    ],
+    "halyk": [
+      {
+        "thumb": "screenshots/halyk/01-thumb",
+        "full": "screenshots/halyk/01-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/halyk/02-thumb",
+        "full": "screenshots/halyk/02-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/halyk/03-thumb",
+        "full": "screenshots/halyk/03-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/halyk/04-thumb",
+        "full": "screenshots/halyk/04-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/halyk/05-thumb",
+        "full": "screenshots/halyk/05-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/halyk/06-thumb",
+        "full": "screenshots/halyk/06-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/halyk/07-thumb",
+        "full": "screenshots/halyk/07-full",
+        "width": 900,
+        "height": 1600,
+        "thumbWidth": 270,
+        "thumbHeight": 480
+      }
+    ],
+    "intebix": [
+      {
+        "thumb": "screenshots/intebix/01-thumb",
+        "full": "screenshots/intebix/01-full",
+        "width": 460,
+        "height": 996,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/intebix/02-thumb",
+        "full": "screenshots/intebix/02-full",
+        "width": 460,
+        "height": 996,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/intebix/03-thumb",
+        "full": "screenshots/intebix/03-full",
+        "width": 460,
+        "height": 996,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/intebix/04-thumb",
+        "full": "screenshots/intebix/04-full",
+        "width": 460,
+        "height": 996,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/intebix/05-thumb",
+        "full": "screenshots/intebix/05-full",
+        "width": 460,
+        "height": 996,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      }
+    ],
+    "stepshero": [
+      {
+        "thumb": "screenshots/stepshero/01-thumb",
+        "full": "screenshots/stepshero/01-full",
+        "width": 739,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/stepshero/02-thumb",
+        "full": "screenshots/stepshero/02-full",
+        "width": 739,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/stepshero/03-thumb",
+        "full": "screenshots/stepshero/03-full",
+        "width": 739,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/stepshero/04-thumb",
+        "full": "screenshots/stepshero/04-full",
+        "width": 739,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/stepshero/05-thumb",
+        "full": "screenshots/stepshero/05-full",
+        "width": 739,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/stepshero/06-thumb",
+        "full": "screenshots/stepshero/06-full",
+        "width": 739,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/stepshero/07-thumb",
+        "full": "screenshots/stepshero/07-full",
+        "width": 739,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/stepshero/08-thumb",
+        "full": "screenshots/stepshero/08-full",
+        "width": 739,
+        "height": 1600,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      }
+    ],
+    "mitt-tele2": [
+      {
+        "thumb": "screenshots/mitt-tele2/01-thumb",
+        "full": "screenshots/mitt-tele2/01-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/mitt-tele2/02-thumb",
+        "full": "screenshots/mitt-tele2/02-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/mitt-tele2/03-thumb",
+        "full": "screenshots/mitt-tele2/03-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/mitt-tele2/04-thumb",
+        "full": "screenshots/mitt-tele2/04-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/mitt-tele2/05-thumb",
+        "full": "screenshots/mitt-tele2/05-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/mitt-tele2/06-thumb",
+        "full": "screenshots/mitt-tele2/06-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      },
+      {
+        "thumb": "screenshots/mitt-tele2/07-thumb",
+        "full": "screenshots/mitt-tele2/07-full",
+        "width": 460,
+        "height": 997,
+        "thumbWidth": 221,
+        "thumbHeight": 480
+      }
+    ]
+  },
+  "logos": {
+    "fergus": "logos/fergus.png",
+    "mitt-tele2": "logos/mitt-tele2.png",
+    "comviq": "logos/comviq.png",
+    "darlean": "logos/darlean.png",
+    "halyk": "logos/halyk.png",
+    "intebix": "logos/intebix.png",
+    "biteeu": "logos/biteeu.png",
+    "bcc-business": "logos/bcc-business.png",
+    "stepshero": "logos/stepshero.png",
+    "capslab": "logos/capslab.png"
+  }
+}

@@ -1,5 +1,6 @@
 import { useId, useImperativeHandle, useRef } from 'react';
-import type { KeyboardEvent, MouseEvent, ReactNode, Ref } from 'react';
+import type { MouseEvent, ReactNode, Ref, SyntheticEvent } from 'react';
+import { keepTabInside } from '../lib/dialog';
 import './InfoDialog.css';
 
 export interface InfoDialogHandle {
@@ -36,35 +37,27 @@ export function InfoDialog({ ref, title, icon, children }: InfoDialogProps) {
     },
   }));
 
-  const close = () => dialogRef.current?.close();
-
-  // Fires for every way of closing: Close, Escape and a backdrop click.
-  const handleClose = () => {
+  // Returns focus to the trigger. Runs right after closing, because the
+  // dialog's own `close` event can arrive hundreds of milliseconds later;
+  // that event only serves as a fallback.
+  const restoreFocus = () => {
     triggerRef.current?.focus();
     triggerRef.current = null;
+  };
+
+  const close = () => {
+    dialogRef.current?.close();
+    restoreFocus();
+  };
+
+  const handleCancel = (event: SyntheticEvent<HTMLDialogElement>) => {
+    event.preventDefault();
+    close();
   };
 
   // A click on the backdrop lands on the <dialog> itself; clicks inside land on its content.
   const handleClick = (event: MouseEvent<HTMLDialogElement>) => {
     if (event.target === event.currentTarget) close();
-  };
-
-  // Keep Tab inside the dialog instead of letting it reach the browser toolbar.
-  const handleKeyDown = (event: KeyboardEvent<HTMLDialogElement>) => {
-    if (event.key !== 'Tab') return;
-    const focusable = Array.from(
-      event.currentTarget.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'),
-    );
-    if (focusable.length === 0) return;
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
   };
 
   return (
@@ -73,9 +66,10 @@ export function InfoDialog({ ref, title, icon, children }: InfoDialogProps) {
       className="info-dialog"
       aria-labelledby={titleId}
       aria-describedby={textId}
-      onClose={handleClose}
+      onCancel={handleCancel}
+      onClose={restoreFocus}
       onClick={handleClick}
-      onKeyDown={handleKeyDown}
+      onKeyDown={keepTabInside}
     >
       <div className="info-dialog__body">
         {icon && (
